@@ -1,0 +1,166 @@
+# ============================================================
+#                    UltimateCore Config
+# ============================================================
+
+debug: false
+
+# Feature toggles
+features:
+  anti-cheat: true
+  combat-system: true
+  custom-items: true
+  chat-system: true
+  scoreboard: true
+  tablist: true
+  join-leave-messages: true
+  rank-system: true
+
+# Anti-Cheat Settings
+anti-cheat:
+  speed:
+    enabled: true
+    threshold: 0.5          # Extra blocks/tick allowed above base speed
+    max-violations: 10
+  fly:
+    enabled: true
+    air-ticks-threshold: 20  # Ticks in air before flagging
+    max-violations: 8
+  nofall:
+    enabled: true
+    min-fall-distance: 4.0   # Minimum fall distance to trigger check
+    max-violations: 10
+  reach:
+    enabled: true
+    max-distance: 3.2        # Max hit distance (vanilla = 3.0)
+    max-violations: 10
+  hitbox:
+    enabled: true
+    max-angle: 105.0         # Max attack angle in degrees (180 = behind)
+    max-violations: 12
+  autoclicker:
+    enabled: true
+    max-cps: 20              # Clicks per second threshold
+    max-violations: 15
+  killaura:
+    enabled: true
+    window-ms: 100           # Time window to track multiple targets (ms)
+    max-targets: 2           # Max distinct targets in window
+    max-violations: 10
+  timer:
+    enabled: true
+    max-multiplier: 1.1      # Max game speed multiplier (1.0 = normal)
+    max-violations: 8
+  jesus:
+    enabled: true
+    max-violations: 10       # Walking on water/lava
+  scaffold:
+    enabled: true
+    min-place-delay-ms: 100  # Min ms between below-feet placements
+    max-streak: 5            # Max rapid placements before flag
+    max-violations: 12
+  punishment:
+    instant-ban: true            # Immediately ban on first hack detection
+    warn-at: 5                   # Violations before warning (if instant-ban is false)
+    kick-at: 15                  # Violations before kick (if instant-ban is false)
+    ban-at: 30                   # Violations before ban (0 = disabled, if instant-ban is false)
+    ban-duration: 0              # Ban duration in days (0 = permanent)
+
+# Combat Settings
+combat:
+  damage-indicators:
+    enabled: true
+    use-action-bar: true     # false = hologram (requires ProtocolLib)
+  critical-hits:
+    enabled: true
+    multiplier: 1.5
+    particle-effect: true
+  combo:
+    enabled: true
+    reset-time: 3            # Seconds before combo resets
+    max-combo: 20
+  pvp-cooldown: 1500         # Milliseconds between hits (0 = disabled)
+  pvp-toggle: true           # Allow players to toggle PvP
+
+# Custom Items
+custom-items:
+  lightning-sword:
+    cooldown: 10             # Seconds
+  fire-bow:
+    cooldown: 5
+  healing-wand:
+    cooldown: 15
+    heal-amount: 4           # Half hearts
+
+# Chat Settings
+chat:
+  format: "&7[{rank}&7] &f{player}&7: &f{message}"
+  anti-spam:
+    enabled: true
+    cooldown: 2              # Seconds between messages
+  anti-swear:
+    enabled: true
+    words: ["badword1", "badword2", "badword3"]
+    replacement: "***"
+  mention:
+    enabled: true
+    sound: true
+
+# Homes
+homes:
+  default-limit: 3
+  vip-limit: 10
+  admin-limit: 50
+
+# Scoreboard
+scoreboard:
+  enabled: true
+  title: "&6&lUltimateCore"
+  update-interval: 20        # Ticks (20 = 1 second)
+  lines:
+    - "&7&m-----------"
+    - "&ePlayer: &f{player}"
+    - "&eRank: &f{rank}"
+    - "&eOnline: &f{online}"
+    - "&eWorld: &f{world}"
+    - "&7&m-----------"
+    - "&bplay.server.net"
+
+# Tablist
+tablist:
+  enabled: true
+  header: "\n&6&lUltimateCore &7| &fplay.server.net\n"
+  footer: "\n&7Players Online: &f{online}/{max}\n"
+
+# Join/Leave Messages
+join-leave:
+  join: "&a&l+ &f{player} &7joined the server"
+  leave: "&c&l- &f{player} &7left the server"
+  first-join: "&6&l[NEW] &f{player} &7joined for the first time!"
+
+# Ranks (ordered by priority, highest first)
+ranks:
+  owner:
+    prefix: "&4[Owner] "
+    suffix: ""
+    priority: 100
+    color: "&4"
+  admin:
+    prefix: "&c[Admin] "
+    suffix: ""
+    priority: 90
+    color: "&c"
+  staff:
+    prefix: "&9[Staff] "
+    suffix: ""
+    priority: 80
+    color: "&9"
+  vip:
+    prefix: "&6[VIP] "
+    suffix: ""
+    priority: 50
+    color: "&6"
+  default:
+    prefix: "&7[Player] "
+    suffix: ""
+    priority: 0
+    color: "&7"

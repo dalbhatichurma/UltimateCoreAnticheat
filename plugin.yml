@@ -1,0 +1,155 @@
+name: UltimateCore
+version: '1.0.0'
+main: com.ultimatecore.plugin.UltimateCore
+api-version: '1.21'
+description: Production-level all-in-one plugin for Paper 1.21.8
+authors: [UltimateCore Team]
+website: https://github.com/ultimatecore
+
+commands:
+  # --- Admin Utilities ---
+  vanish:
+    description: Toggle vanish mode
+    usage: /vanish [player]
+    permission: ultimatecore.vanish
+  tp:
+    description: Teleport to a player or location
+    usage: /tp <player> [target]
+    permission: ultimatecore.tp
+  # --- Player Utilities ---
+  tpa:
+    description: Request teleport to a player
+    usage: /tpa <player>
+    permission: ultimatecore.tpa
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept
+    permission: ultimatecore.tpa
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny
+    permission: ultimatecore.tpa
+  home:
+    description: Teleport to a home
+    usage: /home [name]
+    permission: ultimatecore.home
+  sethome:
+    description: Set a home at your location
+    usage: /sethome [name]
+    permission: ultimatecore.home
+  delhome:
+    description: Delete a home
+    usage: /delhome <name>
+    permission: ultimatecore.home
+  homes:
+    description: List all your homes
+    usage: /homes
+    permission: ultimatecore.home
+  # --- GUI ---
+  menu:
+    description: Open the main menu
+    usage: /menu
+    permission: ultimatecore.menu
+  # --- Chat ---
+  staffchat:
+    description: Toggle staff chat
+    usage: /staffchat
+    permission: ultimatecore.staffchat
+  # --- Rank ---
+  setrank:
+    description: Set a player's rank
+    usage: /setrank <player> <rank>
+    permission: ultimatecore.admin
+  # --- Custom Items ---
+  giveitem:
+    description: Give a custom item
+    usage: /giveitem <item> [player]
+    permission: ultimatecore.giveitem
+  # --- Warp ---
+  warp:
+    description: Teleport to a warp
+    usage: /warp [name]
+    permission: ultimatecore.warp
+  setwarp:
+    description: Set a warp
+    usage: /setwarp <name>
+    permission: ultimatecore.setwarp
+  delwarp:
+    description: Delete a warp
+    usage: /delwarp <name>
+    permission: ultimatecore.setwarp
+  # --- Admin ---
+  ultimatecore:
+    description: Main plugin command
+    usage: /ultimatecore <reload|debug|info>
+    aliases: [uc]
+    permission: ultimatecore.admin
+
+permissions:
+  ultimatecore.admin:
+    description: Full admin access
+    default: op
+    children:
+      ultimatecore.staff: true
+      ultimatecore.vip: true
+      ultimatecore.vanish: true
+      ultimatecore.tp: true
+      ultimatecore.tpa: true
+      ultimatecore.home: true
+      ultimatecore.menu: true
+      ultimatecore.staffchat: true
+      ultimatecore.giveitem: true
+      ultimatecore.warp: true
+      ultimatecore.setwarp: true
+      ultimatecore.anticheat.bypass: true
+      ultimatecore.anticheat.alerts: true
+  ultimatecore.staff:
+    description: Staff access
+    default: false
+    children:
+      ultimatecore.vip: true
+      ultimatecore.staffchat: true
+      ultimatecore.anticheat.alerts: true
+      ultimatecore.vanish: true
+      ultimatecore.tp: true
+  ultimatecore.vip:
+    description: VIP access
+    default: false
+    children:
+      ultimatecore.home: true
+      ultimatecore.menu: true
+      ultimatecore.warp: true
+      ultimatecore.tpa: true
+  ultimatecore.vanish:
+    description: Use /vanish
+    default: op
+  ultimatecore.tp:
+    description: Use /tp
+    default: op
+  ultimatecore.tpa:
+    description: Use /tpa
+    default: true
+  ultimatecore.home:
+    description: Use home commands
+    default: true
+  ultimatecore.menu:
+    description: Use /menu
+    default: true
+  ultimatecore.staffchat:
+    description: Use staff chat
+    default: op
+  ultimatecore.giveitem:
+    description: Use /giveitem
+    default: op
+  ultimatecore.warp:
+    description: Use /warp
+    default: true
+  ultimatecore.setwarp:
+    description: Use /setwarp and /delwarp
+    default: op
+  ultimatecore.anticheat.bypass:
+    description: Bypass anti-cheat checks
+    default: op
+  ultimatecore.anticheat.alerts:
+    description: Receive anti-cheat alerts
+    default: op

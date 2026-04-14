@@ -1,0 +1,80 @@
+# ============================================================
+#                   UltimateCore Messages
+# ============================================================
+# Supports & color codes and {placeholders}
+
+prefix: "&8[&6UC&8] &r"
+
+# General
+no-permission: "{prefix}&cYou don't have permission to do that."
+player-only: "{prefix}&cThis command can only be used by players."
+player-not-found: "{prefix}&cPlayer &e{player} &cnot found."
+invalid-usage: "{prefix}&cUsage: &e{usage}"
+reloaded: "{prefix}&aPlugin reloaded successfully."
+
+# Heal / Feed
+healed-self: "{prefix}&aYou have been healed!"
+healed-other: "{prefix}&aYou healed &e{player}&a."
+healed-by: "{prefix}&aYou were healed by &e{player}&a."
+fed-self: "{prefix}&aYou have been fed!"
+fed-other: "{prefix}&aYou fed &e{player}&a."
+fed-by: "{prefix}&aYou were fed by &e{player}&a."
+
+# Fly
+fly-enabled: "{prefix}&aFly mode &2enabled&a."
+fly-disabled: "{prefix}&cFly mode &4disabled&c."
+fly-enabled-other: "{prefix}&aEnabled fly for &e{player}&a."
+fly-disabled-other: "{prefix}&cDisabled fly for &e{player}&c."
+
+# Vanish
+vanish-enabled: "{prefix}&aYou are now &2invisible&a."
+vanish-disabled: "{prefix}&cYou are now &4visible&c."
+
+# Teleport
+teleported: "{prefix}&aTeleported to &e{player}&a."
+teleport-request-sent: "{prefix}&aTeleport request sent to &e{player}&a."
+teleport-request-received: "{prefix}&e{player} &awants to teleport to you. &2/tpaccept &aor &4/tpdeny"
+teleport-accepted: "{prefix}&aTeleport request accepted."
+teleport-denied: "{prefix}&cTeleport request denied."
+teleport-expired: "{prefix}&cTeleport request expired."
+no-pending-request: "{prefix}&cYou have no pending teleport requests."
+
+# Homes
+home-set: "{prefix}&aHome &e{name} &aset!"
+home-deleted: "{prefix}&aHome &e{name} &adeleted."
+home-not-found: "{prefix}&cHome &e{name} &cnot found."
+home-teleported: "{prefix}&aTeleported to home &e{name}&a."
+home-limit-reached: "{prefix}&cYou have reached your home limit &7({limit})&c."
+homes-list: "{prefix}&aYour homes: &e{homes}"
+
+# Warp
+warp-set: "{prefix}&aWarp &e{name} &aset!"
+warp-deleted: "{prefix}&aWarp &e{name} &adeleted."
+warp-not-found: "{prefix}&cWarp &e{name} &cnot found."
+warp-teleported: "{prefix}&aTeleported to warp &e{name}&a."
+
+# Rank
+rank-set: "{prefix}&aSet &e{player}&a's rank to &e{rank}&a."
+rank-received: "{prefix}&aYour rank has been set to &e{rank}&a."
+
+# Chat
+chat-cooldown: "{prefix}&cPlease wait &e{time}s &cbefore sending another message."
+chat-swear-blocked: "{prefix}&cYour message contained blocked words."
+staff-chat-enabled: "{prefix}&9Staff chat &2enabled&9."
+staff-chat-disabled: "{prefix}&9Staff chat &4disabled&9."
+staff-chat-format: "&9[Staff] &e{player}&9: &f{message}"
+mention-format: "&e@{player}"
+
+# Anti-Cheat
+anticheat-alert: "&c[AC] &e{player} &cfailed &e{check} &c(x{violations})"
+anticheat-warn: "{prefix}&cYou have been flagged for &e{check}&c. Please stop."
+anticheat-kick-reason: "&cYou were kicked for suspicious activity.\n&7Check: {check}"
+anticheat-ban-reason: "&cYou were banned for cheating.\n&7Check: {check}"
+
+# Custom Items
+item-cooldown: "{prefix}&cThis ability is on cooldown for &e{time}s&c."
+item-no-target: "{prefix}&cNo valid target found."
+
+# Combat
+combo-display: "&6Combo x{combo}!"
+critical-hit: "&c✦ CRITICAL!"
