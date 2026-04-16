@@ -3,7 +3,7 @@ version: '1.0.0'
 main: com.ultimatecore.plugin.UltimateCore
 api-version: '1.21'
 description: Production-level all-in-one plugin for Paper 1.21.8
-authors: [UltimateCore Team]
+authors: MathTeacher
 website: https://github.com/ultimatecore
 
 commands:
